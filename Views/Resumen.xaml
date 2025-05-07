@@ -58,8 +58,8 @@
 
 
         <Button Text="Cerrar sesión"
+                Style="{StaticResource ButtonStyle}"
                 Clicked="Button_Clicked"
-                BackgroundColor="Red"
                 TextColor="White"
                 HorizontalOptions="Center"/>
 

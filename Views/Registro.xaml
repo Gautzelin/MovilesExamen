@@ -29,31 +29,34 @@
 
             <!-- Fila 0: Etiquetas -->
             <Label Text="Nombre"
-           HorizontalOptions="Center"
-           Grid.Row="0"
-           Grid.Column="0"/>
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Style="{StaticResource LabelStyle}"/>
             <Label Text="Apellido"
-           HorizontalOptions="Center"
-           Grid.Row="0"
-           Grid.Column="1"/>
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Style="{StaticResource LabelStyle}"/>
             <Label Text="Voltiamperio VA"
-           HorizontalOptions="Center"
-           Grid.Row="0"
-           Grid.Column="2"/>
+                   HorizontalOptions="Center"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   Style="{StaticResource LabelStyle}"/>
 
             <!-- Fila 1: Entradas -->
             <Entry x:Name="txtNombre"
-           Placeholder="Ingresar Nombre"
-           Grid.Row="1"
-           Grid.Column="0"/>
+                   Placeholder="Ingresar Nombre"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
             <Entry x:Name="txtApellido"
-           Placeholder="Ingresar Apellido"
-           Grid.Row="1"
-           Grid.Column="1"/>
+                   Placeholder="Ingresar Apellido"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
             
             <Picker x:Name="pickerVA"
-            Grid.Row="1"
-            Grid.Column="2">
+                    Grid.Row="1"
+                    Grid.Column="2">
                 <Picker.Items>
                     <x:String>500 VA</x:String>
                     <x:String>750 VA</x:String>
@@ -117,7 +120,8 @@
                     Text="Calcular Pago Mensual"
                     Clicked="btnCalcularPago_Clicked"
                     Grid.Row="3"
-                    Grid.Column="0"/>
+                    Grid.Column="0"
+                    BackgroundColor="ForestGreen"/>
 
             <Label
                 HorizontalOptions="Center"
@@ -131,7 +135,8 @@
 
         <Button x:Name="btnVerResumen"
                 Text="Ver Resumen"
-                Clicked="btnVerResumen_Clicked"/>
+                Clicked="btnVerResumen_Clicked"
+                BackgroundColor="ForestGreen"/>
 
     </VerticalStackLayout>
 </ContentPage>

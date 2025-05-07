@@ -38,6 +38,7 @@
                    Grid.Row="0"
                    Grid.Column="0"/>
             <Entry x:Name="txtUsuario"
+                   Style="{StaticResource EntryStyle}"
                    Placeholder="Ingrese el usuario"
                    Grid.Row="0"
                    Grid.Column="1"/>
@@ -48,6 +49,7 @@
                    Grid.Row="1"
                    Grid.Column="0"/>
             <Entry x:Name="txtContrasena"
+                   Style="{StaticResource EntryStyle}"
                    Placeholder="Ingrese la contraseña"
                    IsPassword="True"
                    Grid.Row="1"
@@ -58,13 +60,15 @@
                     Text="Iniciar Sesión"
                     Clicked="btnInicioSesion_Clicked"
                     Grid.Row="2"
-                    Grid.Column="0"/>
+                    Grid.Column="0"
+                    BackgroundColor="ForestGreen"/>
 
             <Button x:Name="btnAcercaDe"
                     Text="Acerca de"
                     Clicked="btnAcercaDe_Clicked"
                     Grid.Row="2"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    BackgroundColor="ForestGreen"/>
         </Grid>
 
     </VerticalStackLayout>
