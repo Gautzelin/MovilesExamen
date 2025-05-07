@@ -42,16 +42,24 @@ public partial class Registro : ContentPage
 
     private void btnVerResumen_Clicked(object sender, EventArgs e)
     {
-        var nombre = txtNombre.Text?.Trim() ?? string.Empty;
-        var apellido = txtApellido.Text?.Trim() ?? string.Empty;
-        //var edad = edadEntry.Text?.Trim() ?? string.Empty;
-        var fecha = datePickerFecha.Date;
-        var ciudad = pickerCiudad.SelectedItem?.ToString() ?? string.Empty;
-        var inicial = decimal.TryParse(entryMontoInicial.Text, out var m) ? m : 0m;
-        var pagoMensual = decimal.TryParse(entryCuotaMensual.Text, out var p) ? p : 0m;
+        if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+            string.IsNullOrWhiteSpace(txtApellido.Text) ||
+            pickerVA.SelectedItem == null ||
+            pickerCiudad.SelectedItem == null ||
+            string.IsNullOrWhiteSpace(entryMontoInicial.Text) ||
+            string.IsNullOrWhiteSpace(entryCuotaMensual.Text))
+        {
+            DisplayAlert("Error", "Por favor complete todos los campos antes de continuar.", "OK");
+            return;
+        }
 
-        Navigation.PushAsync(new Resumen(Usuario, nombre, apellido,
-                                              fecha, ciudad,
-                                              inicial, pagoMensual));
+        string nombre = txtNombre.Text;
+        string apellido = txtApellido.Text;
+        string voltaje = pickerVA.SelectedItem.ToString();
+        string ciudad = pickerCiudad.SelectedItem.ToString();
+        DateTime fecha = datePickerFecha.Date;
+        decimal cuotaMensual = decimal.Parse(entryCuotaMensual.Text);
+
+        Navigation.PushAsync(new Resumen(nombre, apellido, voltaje, ciudad, fecha, cuotaMensual));
     }
 }

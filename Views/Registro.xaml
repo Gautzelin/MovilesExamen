@@ -50,6 +50,7 @@
            Placeholder="Ingresar Apellido"
            Grid.Row="1"
            Grid.Column="1"/>
+            
             <Picker x:Name="pickerVA"
             Grid.Row="1"
             Grid.Column="2">
