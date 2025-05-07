@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcorreaExamen.Views.Registro"
+             Title="Registro">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="welcomeLabel"
+            Text="REGISTRO"
+            TextColor="Blue"
+            FontSize="22"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid>
+
+            <!-- Filas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Columnas -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Fila 0: Etiquetas -->
+            <Label Text="Nombre"
+           HorizontalOptions="Center"
+           Grid.Row="0"
+           Grid.Column="0"/>
+            <Label Text="Apellido"
+           HorizontalOptions="Center"
+           Grid.Row="0"
+           Grid.Column="1"/>
+            <Label Text="Voltiamperio VA"
+           HorizontalOptions="Center"
+           Grid.Row="0"
+           Grid.Column="2"/>
+
+            <!-- Fila 1: Entradas -->
+            <Entry x:Name="txtNombre"
+           Placeholder="Ingresar Nombre"
+           Grid.Row="1"
+           Grid.Column="0"/>
+            <Entry x:Name="txtApellido"
+           Placeholder="Ingresar Apellido"
+           Grid.Row="1"
+           Grid.Column="1"/>
+            <Picker x:Name="pickerVA"
+            Grid.Row="1"
+            Grid.Column="2">
+                <Picker.Items>
+                    <x:String>500 VA</x:String>
+                    <x:String>750 VA</x:String>
+                    <x:String>1000 VA</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+
+        <Grid>
+            <!-- Filas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Columnas -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Fila 0: Fecha -->
+            <Label Text="Fecha"
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+            <DatePicker x:Name="datePickerFecha"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+
+            <!-- Fila 1: Ciudad -->
+            <Label Text="Ciudad"
+                    HorizontalOptions="Center"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+            <Picker x:Name="pickerCiudad"
+                    Grid.Row="1"
+                    Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Quito</x:String>
+                    <x:String>Guayaquil</x:String>
+                    <x:String>Cuenca</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Fila 2: Monto Inicial -->
+            <Label Text="Monto Inicial"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+            <Entry x:Name="entryMontoInicial"
+                    Placeholder="Ingrese Monto Inicial"
+                    Keyboard="Numeric"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+
+            <!-- Fila 3: Botón y Cuota Mensual -->
+            <Button x:Name="btnCalcularPago"
+                    Text="Calcular Pago Mensual"
+                    Clicked="btnCalcularPago_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
+
+            <Label
+                HorizontalOptions="Center"
+                Grid.Row="3"
+                Grid.Column="1"/>
+            <Entry x:Name="entryCuotaMensual"
+                   IsReadOnly="True"
+                   Grid.Row="3"
+                   Grid.Column="2"/>
+        </Grid>
+
+        <Button x:Name="btnVerResumen"
+                Text="Ver Resumen"
+                Clicked="btnVerResumen_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

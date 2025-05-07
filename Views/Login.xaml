@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcorreaExamen.Views.Login"
+             Title="Login">
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="25">
+        <Label 
+            Text="Login"
+            TextColor="Red"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image Source="contacts.png"
+               HeightRequest="100"
+               HorizontalOptions="Center" />
+
+        <Grid>
+
+            <!--Filas-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Columnas-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Contrasena"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese la contraseña"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+            <!-- Fila 2: Botones -->
+            <Button x:Name="btnInicioSesion"
+                    Text="Iniciar Sesión"
+                    Clicked="btnInicioSesion_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnAcercaDe"
+                    Text="Acerca de"
+                    Clicked="btnAcercaDe_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
