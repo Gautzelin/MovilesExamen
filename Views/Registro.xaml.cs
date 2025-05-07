@@ -34,8 +34,8 @@ public partial class Registro : ContentPage
         // Calcular saldo restante
         var resto = COSTO_TOTAL - inicial;
         // 4 cuotas con 4% adicional sobre cada cuota
-        var cuotaBase = resto / 4;
-        var costoAdicional = COSTO_TOTAL * 0.04m;
+        var cuotaBase = resto / 3;
+        var costoAdicional = COSTO_TOTAL * 0.03m;
         var cuotaConInteres = cuotaBase + costoAdicional;
         entryCuotaMensual.Text = cuotaConInteres.ToString("F2");
     }
